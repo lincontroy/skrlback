@@ -28,6 +28,33 @@
                         </div>
                         <small class="form-text text-muted">User cannot be changed for existing transactions.</small>
                     </div>
+
+                    <div class="mb-3">
+                        <label for="description" class="form-label">Name</label>
+                        <input type="text" class="form-control" id="name" name="name" 
+                               value="{{ old('name', $transaction->name) }}" required>
+                        @error('name')
+                            <div class="text-danger">{{ $message }}</div>
+                        @enderror
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="description" class="form-label">Email</label>
+                        <input type="text" class="form-control" id="name" name="email" 
+                               value="{{ old('email', $transaction->email) }}" required>
+                        @error('name')
+                            <div class="text-danger">{{ $message }}</div>
+                        @enderror
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="description" class="form-label">Reference</label>
+                        <input type="text" class="form-control" id="name" name="reference" 
+                               value="{{ old('reference', $transaction->reference) }}" required>
+                        @error('name')
+                            <div class="text-danger">{{ $message }}</div>
+                        @enderror
+                    </div>
                     
                     <div class="mb-3">
                         <label for="type" class="form-label">Transaction Type</label>

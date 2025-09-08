@@ -35,7 +35,7 @@
                     </td>
                     <td>{{ $transaction->description }}</td>
                     <td class="{{ $transaction->type == 'deposit' ? 'text-success' : 'text-danger' }}">
-                        KES {{ number_format($transaction->amount, 2) }}
+                        {{$transaction->currency}} {{ number_format($transaction->amount, 2) }}
                     </td>
                     <td>{{ $transaction->created_at->format('M d, Y H:i') }}</td>
                     <td>
