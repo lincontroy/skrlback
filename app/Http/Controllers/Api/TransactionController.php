@@ -21,7 +21,7 @@ class TransactionController extends Controller
             'title' => $tx->description ?: ucfirst($tx->type),
             'type' => ucfirst($tx->type),
             'amount' => number_format($tx->amount, 2),
-            'fee' => number_format($tx->amount, 2),
+            'fee' => number_format($tx->fee, 2),
             'name' => $tx->name ?: null,
             'email' => $tx->email ?: null,
             'reference' => $tx->reference ?: null,

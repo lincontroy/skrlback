@@ -61,6 +61,14 @@
                                     <div class="text-danger">{{ $message }}</div>
                                 @enderror
                             </div>
+                            <div class="mb-3">
+                                <label for="amount" class="form-label">Fee</label>
+                                <input type="number" step="0.01" class="form-control" id="amount" 
+                                       name="fee" value="{{ old('amount', $transaction->fee) }}" required>
+                                @error('fee')
+                                    <div class="text-danger">{{ $message }}</div>
+                                @enderror
+                            </div>
                         </div>
                         <div class="col-md-6">
                             <div class="mb-3">
