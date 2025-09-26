@@ -67,6 +67,7 @@ class UserController extends Controller
         $updateData = [
             'name' => $request->name,
             'email' => $request->email,
+            'customer_id' => $request->customer_id,
             'skiller_badge' => $request->skiller_badge,
             'biometrics_enabled' => $request->has('biometrics_enabled'),
             'notifications_enabled' => $request->has('notifications_enabled'),
